@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+
+/* Menu */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    background-color: rgb(157, 157, 230);
+    color: #fff;
+}
+
+.logo, .humburguer {
+    padding: 10px;
+}
+
+.humburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .humburguer {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-top: solid 1px #fff;
+        width: 100vw;
+    }
+}
+/* -------------------------------------------------- */
+
+/* ------------------------------------------------- */
