@@ -5,6 +5,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html, body {
+    background-color: rgb(238, 235, 235);
+}
+
 /* Header */
 
 /* Menu */
@@ -17,6 +21,10 @@
     font-size: 18px;
     background-color: rgb(157, 157, 230);
     color: #fff;
+
+    position: fixed;
+    right: 0;
+    left: 0;
 }
 
 .logo, .humburguer {
@@ -52,3 +60,20 @@
 /* -------------------------------------------------- */
 
 /* ------------------------------------------------- */
+
+/* Main */
+main {
+    padding-top: 45px;
+}
+
+section {
+    background-color: #fff;
+    padding: 100px;
+}
+
+article {
+    background-color: aqua;
+    padding: 20px;
+    margin: 3px;
+}
+/* --------------------------------------------------- */
