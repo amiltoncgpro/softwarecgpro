@@ -67,12 +67,19 @@ main {
 }
 
 section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: #fff;
-    padding: 100px;
+}
+
+section h1 {
+    width: 100%;
 }
 
 article {
-    background-color: aqua;
+    width: 500px;
+    background-color: rgb(166, 161, 216);
     padding: 20px;
     margin: 3px;
 }
