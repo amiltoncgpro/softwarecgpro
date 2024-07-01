@@ -9,6 +9,14 @@ html, body {
     background-color: rgb(238, 235, 235);
 }
 
+/* Paleta de cores */
+:root {
+    --cor01: ;
+    --cor02: ;
+    --cor03: ;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
 /* Header */
 
 /* Menu */
@@ -19,7 +27,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    background-color: rgb(157, 157, 230);
+    background-color: rgb(101, 13, 122);
     color: #fff;
 
     position: fixed;
@@ -63,7 +71,7 @@ html, body {
 
 /* Main */
 main {
-    padding-top: 45px;
+    /* padding-top: 45px; */
 }
 
 main * {
@@ -72,6 +80,7 @@ main * {
 
 section {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #fff;
@@ -79,17 +88,22 @@ section {
 
 section h1 {
     width: 100%;
+    text-align: center;
 }
 
 article {
     width: 500px;
-    background-color: rgb(166, 161, 216);
+    background-color: rgb(194, 149, 206);
     padding: 20px;
     margin: 3px;
+    border-radius: 5px;
 }
 
 ul.cod-menu {
     background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
 }
 
 article li {
@@ -100,3 +114,9 @@ article a {
     text-decoration: none;
 }
 /* --------------------------------------------------- */
+
+/* Footer */
+footer {
+    padding: 20px;
+}
+/* ----------------------------------------------- */
