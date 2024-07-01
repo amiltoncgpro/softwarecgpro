@@ -20,3 +20,5 @@ function tamanho() {
     }
 }
 // -----------------------------------------------------------------------------------
+
+window.document.querySelector('.nav-bar').style.display = 'none'
