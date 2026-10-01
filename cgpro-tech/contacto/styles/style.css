@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+section.aviso {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    border-radius: 5px;
+    margin: 3px;
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+div#container {
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+main {
+    grid-area: 2 / 2 / -2 / -2;
+    
+    height: 500px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main h1 {
+    font-size: clamp(16pt, 2.5vw, 14pt);
+}
+
+main p {
+    font-size: clamp(11pt, 1.3vw, 14pt);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    div#container {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+}

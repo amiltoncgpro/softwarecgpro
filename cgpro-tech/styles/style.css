@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+/* Global e Container */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Paletas de cores */
+/*
+Variáveis para cores:
+  --fundo-principal
+  --texto
+  --texto-inverso
+  --destaque
+  --destaque-inverso
+  --fundo-card
+*/
+
+:root {
+  --fundo-principal: #f5f5f5;
+  --texto: #222222;
+  --texto-inverso: #ffffff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66bbff;
+  --fundo-card: #ffffff;
+}
+
+body.escuro {
+  --fundo-principal: #222222;
+  --texto: #e0e0e0e0;
+  --texto-inverso: #33333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #44444444;
+}
+/* ------------------------------------------------------------------ */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5em;
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+}
+
+#container {
+    display: grid;
+    grid-template: auto auto auto / auto 1fr 400px auto;
+    justify-content: center;
+    gap: 3px;
+}
+
+div#container > header, main, aside, footer {
+    background-color: var(--fundo-card);
+}
+
+section {
+    padding: 10px;
+}
+
+h1, h2, h3, p {
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: clamp(20px, 3vw, 22px);
+}
+
+h2 {
+    font-size: clamp(16px, 2.5vw, 18px);
+}
+
+h3 {
+    font-size: clamp(14, 2vw, 16px);
+}
+
+p {
+    font-size: clamp(13px, 1.5vw, 14px);
+}
+
+button {
+    padding: 10px;
+    margin: 1px;
+    background-color: var(--destaque);
+    border-radius: 20px;
+    border: solid 1px var(--destaque);
+}
+
+button a {
+    background-color: transparent;
+    color: var(--texto-inverso);
+    text-decoration: none;
+     font-weight: bold;
+     font-size: 1.2em;
+}
+
+button.transparent {
+    background-color: transparent;
+    color: var(--destaque);
+}
+
+button.transparent a {
+    color: var(--destaque);
+}
+/* ------------------------------------------------------- */
+
+/* Cabeçalho */
+header {
+    grid-area: 1 / 1 / 2 / -1;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Menu */
+.nav-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    background-color: var(--destaque);
+    color: var(--texto);
+}
+
+.logo, .humburguer, .menu a {
+    padding: 10px;
+    color: var(--texto-inverso);
+}
+
+.humburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.menu a {
+    padding: 5px 10px 5px 10px;
+    margin-right: 3px;
+    color: var(--texto-inverso);
+    text-decoration: none;
+    border-radius: 0px;
+    transition: color 0.5s;
+}
+
+.menu a:hover {
+  color: var(--texto);
+}
+
+.menu a.pagina-actual {
+    border-bottom: 2px solid var(--texto-inverso);
+}
+
+.menu a#carrinho {
+    background-color: var(--texto-inverso);
+    color: var(--destaque);
+    border-radius: 15px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.menu a#carrinho:hover {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+}
+
+@media screen and (max-width: 768px) {
+    .humburguer {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+    }
+
+    .logo, .humburguer {
+        padding: 9px;
+    }
+
+    .menu a {
+        display: block;
+        border-top: solid 1px var(--texto-inverso);
+        border-radius: 0px;
+        width: 100%;
+    }
+}
+/* -------------------------------------------------- */
+
+/* Parte principal */
+main {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* Secção do 'ACESSÓRIOS PREMIUM PARA O TEU TELEMOVÉL' */
+section#apott {
+    background-color: var(--fundo-card);
+    background-image: url('../img/acessório_para_o_teu_telemovel.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    align-items: center;
+}
+
+section#apott h2, p {
+    background: transparent;
+}
+/* -------------------------------------------------- */
+
+/* Secção do 'ENCONTRE O QUE PRECISA' */
+section#eop article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+section#eop article > div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section#eop article > div img {
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+}
+/* -------------------------------------------------- */
+
+/* Secção do 'PRODUTOS EM DESTAQUE' */
+section#ped article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+section#ped > article > div p {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    margin: 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+section#ped img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--fundo-principal);
+}
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+/* Parte secundária ou lateral */
+aside {
+    grid-area: 2 / 3 / -2 /-2;
+}
+
+/* Secção do 'PORQUE ESCOLHER A CGPRO TECH' */
+section#peact article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+section#peact > article > div h3 {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+section#peact > article > div p {
+    padding-left: 5px;
+}
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+/* Rodapé */
+footer {
+    grid-area: -2 / 1 / -1 / -1;
+}
+
+/* Secção do 'CGPRO TECH' */
+section#ct > menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    width: 100%;
+}
+
+section#ct > menu a {
+    color: var(--texto);
+    text-decoration: none;
+    padding: 10px;
+}
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+/* Typical Device breakpoints
+--------------------------------------
+Pequenas telas: ate 600px
+Celular: de 600px ate 768px
+Tablet: 768px ate 992px
+Desktop: 992px ate 1200px
+Grandes telas: acima de 1200px*/
+
+@media screen and (max-width: 992px) {
+    div#container {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 3px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    div#container {
+        grid-template-columns: 1fr 800px 400px 1fr;
+    }
+}
+/* ------------------------------------------------------ */
